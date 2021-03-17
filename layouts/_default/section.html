@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    {{- partial "head.html" . -}}
+    <body>
+        <div id="app">
+            {{- partial "header.html" . -}}
+            <main id="content">
+                <main id="terms">
+                    <div class="container">
+                        <h1 class='section-header'>Articles</h1>
+                        <div class="row ">
+                            <div class="col-lg-9 col-12">
+                                {{ range .Paginator.Pages }}
+                                    {{ partial "card/card-horizontal.html" . }}
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </main>
+            {{- partial "footer.html" . -}}
+        </div>
+    </body>
+</html>

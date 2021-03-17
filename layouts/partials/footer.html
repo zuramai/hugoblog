@@ -1,0 +1,27 @@
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                Copyright &copy; {{ now.Format "2006"}} {{ .Site.Title }}
+            </div>
+            <div class="col-6">
+                <div class="social-links">
+                    {{ if .Site.Params.facebook }}
+                        {{ $url := .Site.Params.facebook }}
+                        {{ with resources.Get "images/socials/facebook.svg"}}
+                            <a href="{{ $url }}" target="_blank" rel="noreferrer">{{.Content | safeHTML }}</a>
+                        {{ end }}
+                    {{ end }}
+                    {{ if .Site.Params.github }}
+                        {{ $url := .Site.Params.github }}
+                        {{ with resources.Get "images/socials/github.svg"}}
+                            <a href="{{ $url }}" target="_blank" rel="noreferrer">{{.Content | safeHTML }}</a>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="{{ (resources.Get "js/main.js").Permalink }}"></script>

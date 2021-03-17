@@ -1,0 +1,27 @@
+
+<div class="card card-horizontal mb-5">
+    <div class="row">
+        <!-- Left Side of Card -->
+        <div class="col-lg-4 col-12">
+            <div class="card-thumbnail">
+                {{ $articleURL := .Permalink }}
+                {{ if .Params.featured_image }}
+                    {{ $sitetitle := (.Title) }}
+                    {{ with .Resources.GetMatch (.Params.featured_image) }}
+                        {{ $thumb := .Resize "400x" }}
+                        <a href="{{ $articleURL }}"><img src="{{ $thumb.Permalink }}" class='card-thumbnail-image' alt="{{ $sitetitle }}"></a>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    
+        <!-- Right Side of Card -->
+        <div class="col-lg-8 col-12">
+            <div class="card-right">
+                <h1 class='card-title'><a href="{{ $articleURL }}">{{ .Title }}</a></h1>
+                <p class='date'>Published {{ dateFormat "Jan 2, 2006" .Date }}</p>
+                <p class='summary'>{{ .Summary }}</p>
+            </div>
+        </div>
+    </div>
+</div>

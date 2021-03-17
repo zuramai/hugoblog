@@ -1,0 +1,25 @@
+<div class="card card-vertical-md ">
+    <div class="card-thumbnail">
+        {{ $articlePermalink := .Permalink }}
+
+        {{ if .Params.featured_image }}
+            {{ $sitetitle := (.Title) }}
+            {{ with .Resources.GetMatch (.Params.featured_image) }}
+                {{ $thumb := .Resize "400x" }}
+                <a href="{{ $articlePermalink }}"><img src="{{ $thumb.Permalink }}" class='card-thumbnail-image' alt="Image for {{ $sitetitle }}"></a>
+                
+            {{ end }}
+        {{ end }}
+    </div>
+    <div class="card-detail">
+        <div class="article-category">
+            {{ range .Params.categories }}
+                IN <a class="little-bold" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . | upper }}</a>
+            {{ end }}
+        </div>
+        <h1 class='card-title'><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        <div class="article-category">
+            Published <span class='little-bold'>{{dateFormat "Jan 2, 2006" .Date }}</span>
+        </div>
+    </div>
+</div>

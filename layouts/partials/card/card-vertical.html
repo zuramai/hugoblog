@@ -1,0 +1,22 @@
+<div class="card card-vertical card-xl">
+    <div class="card-thumbnail">
+        {{ $articlePermalink := .Permalink }}
+        {{ if .Params.featured_image }}
+            {{ $sitetitle := (.Title) }}
+            {{ with .Resources.GetMatch (.Params.featured_image) }}
+                {{ $thumb := .Resize "800x" }}
+                <a href="{{ $articlePermalink }}"><img src="{{ $thumb.Permalink }}" class='card-thumbnail-image' alt="{{ $sitetitle }}"></a>
+                
+            {{ end }}
+        {{ end }}
+    </div>
+    <div class="card-detail">
+        <div class="categories">
+            {{ range .Params.categories }}
+                <a class="categories" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">#{{ . | urlize }}</a>
+            {{ end }}
+        </div>
+        <h1 class='card-title'><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        <p class='summary'>{{ .Summary }}</p>
+    </div>
+</div>

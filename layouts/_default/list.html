@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    {{- partial "head.html" . -}}
+    <body>
+        <div id="app">
+            {{- partial "header.html" . -}}
+            <main id="content">
+                <main id="terms">
+                    <div class="terms-header">
+                        <div class="container">
+                            <p>{{.Data.Singular}}</p>
+                            <h1>{{.Data.Term}}</h1>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-lg-9 col-12">
+                                {{ range (.Paginator 2).Pages }}
+                                    {{ partial "card/card-horizontal.html" . }}
+                                {{ end }}
+                            </div>
+                        </div>
+                        {{ partial "paginator" . }}
+                    </div>
+                </main>
+            </main>
+            {{- partial "footer.html" . -}}
+        </div>
+    </body>
+</html>

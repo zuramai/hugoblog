@@ -1,0 +1,11 @@
+.terms-header {
+    background-color: lighten($primary, 40%);
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+    p {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: .8rem;
+        opacity: .7;
+    }
+}

@@ -1,0 +1,59 @@
+{{ define "main" }}
+<div class="container">
+
+    <!-- First Section -->
+    <section class='first-section'>
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                {{ range $index, $el := where .Pages "Section" "articles"}}
+                    {{ with $el }}
+                        {{ range first 1 .Pages.ByWeight }}
+                            {{ partial "card/card-vertical.html" . }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            </div>
+            <div class="col-lg-6 col-12">
+                
+                <h2 class='latest-articles mb-5'>LATEST ARTICLES</h2>
+
+                {{ range $index, $el := where .Pages "Section" "articles"}}
+                    {{ with $el }}
+                        {{ range first 3 .Pages.ByDate.Reverse }}
+                            {{ partial "card/card-horizontal-mini.html" . }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- List categories and post section -->
+    <section class='categories'>
+            {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+                {{ if eq $taxonomyname "categories" }}
+                    <!-- Loop over categories -->
+                    {{ range $key, $value := $taxonomy }}
+                        <div class='category'>
+                                <h1 class='category-title'> {{ $key | humanize }} </h1>
+                                <div class='row'>
+                                    <!-- Loop over posts -->
+                                    {{ range $value.Pages.ByDate.Reverse }}
+                                        <div class="col-lg-4 col-12">
+                                            {{ partial "card/card-vertical-md.html" . }}
+                                        </div>
+                                    {{ end }} <!-- end loop posts -->
+                                        
+                                </div>
+                        </div>
+                        <a href="/categories/{{ $key | urlize }}" class='float-right'>More articles ></a>
+                        <div class="clear-both"></div>
+                    {{ end }} <!-- end loop taxonomy content -->    
+
+                {{ end }} <!-- end check category -->
+            {{ end }} <!-- end loop taxonomies -->
+    </section>
+</div>
+{{ end }}

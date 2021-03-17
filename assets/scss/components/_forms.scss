@@ -1,0 +1,12 @@
+.form-control {
+    padding: .5rem;
+    border: 1px solid rgb(212, 213, 219);
+    border-radius: 50rem;
+    outline: none;
+    transition: all .2s;
+
+    &:focus {
+        border-color: $primary;
+        box-shadow: 2px 2px 5px rgba($primary, .2);
+    }
+}

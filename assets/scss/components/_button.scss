@@ -1,0 +1,10 @@
+.btn {
+    padding: .5rem 1rem;
+    background-color: white;
+    border-radius: .5rem;
+    cursor: pointer;
+    &.btn-toggler {
+        border: 1px solid $secondary;
+        color: $secondary;
+    }
+}

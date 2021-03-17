@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+<body>
+    <div id="app">
+        {{ partial "header.html" . }}
+        <main id="content">
+            <div class='container'>
+                <!-- Renders the li.html content view for each content/posts/*.md -->
+                <div class="row">
+                    
+                    <!-- Single Heading -->
+                    <div class="single-header col-md-8 col-12 mx-auto">
+                        <time datetime="{{ .Date }}">Published {{ .Date.Format "January 2, 2006" }}</time>
+                        <h1>{{ .Title }}</h1>
+                        <ul class="tags">
+                            {{ range .Params.tags }}
+                            <li class='tag'><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+                            {{ end }}
+                        </ul>
+                    </div>
+        
+                    <div class="col-md-10 col-12 mx-auto">
+                        {{ if .Params.featured_image }}
+                            <div class="thumbnail">
+                                {{ with .Resources.GetMatch (.Params.featured_image) }}
+                                    {{ $thumb := .Resize "800x" }}
+                                    <img src="{{ $thumb.Permalink }}" class='thumbnail-image' alt="{{ .Title }}">
+                                {{ end }}
+                            </div>
+                            {{ end }}
+                        <img src="" alt="" srcset="">
+                    </div>
+                    <div class="col-md-8 col-12 mx-auto">
+                        <div class="the-content">
+                            {{ .Content }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        {{ partial "footer.html" . }}
+    </div>
+</body>
+</html>

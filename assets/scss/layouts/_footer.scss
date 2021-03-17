@@ -1,0 +1,14 @@
+footer {
+    background-color: lighten($color: $primary, $amount: 45%);
+    padding: 1rem 0;
+
+    .social-links {
+        float: right;
+        a {
+            margin-left: 1rem;
+        }
+        svg {
+            color: transparentize($body-color, .4);
+        }
+    }
+}

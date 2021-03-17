@@ -1,0 +1,139 @@
+.card {
+    margin-bottom: 1.5rem;
+    .card-thumbnail {
+        width: 100%;
+        padding-top: 65%; // 16:9 Ratio
+        position: relative;
+        object-fit: cover;
+
+        .card-thumbnail-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            right: 0;
+            bottom: 0;
+            border-radius: .3rem;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .card-right {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    &.card-horizontal {
+        .date {
+            font-size: .9rem;
+            margin-bottom: 1rem;
+            color: #707480;
+
+        }
+        .summary {
+            flex: 1;
+            font-weight: 400;
+            color: #707480;
+        }
+        .author {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            img {
+                margin-right: 1rem;
+                width: 40px;
+                object-fit: cover;
+                height: 40px;
+                border-radius: 50%;
+            }
+            .author-detail h6 {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+            .date {
+                color: #666;
+                font-size: .8rem;
+            }
+        }
+    }
+    .card-title {
+        font-size: 2rem;
+        margin-bottom: .5rem;
+        font-weight: 600;
+        line-height: 2.5rem;
+        
+        a {
+            color: $heading-color;
+        }
+    }
+    &.card-horizontal-mini {
+        .author {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .category {
+            font-weight: 400;
+            flex: 1;
+            text-transform: uppercase;
+            a {
+                color: #666;
+                font-weight: 600;
+            }
+        }
+        .card-thumbnail {
+            padding-top: 65%;
+        }
+        .card-title {
+            font-size: 1.3rem;
+            line-height: 1.6rem;
+            margin-bottom: 0;
+        }
+        .date {
+            font-size: .7rem;
+        }
+        .author-name {
+            font-weight: 400;
+            font-size: .8rem;
+        }
+    }
+    .summary {
+        color: #707070;
+    }
+    &.card-vertical {
+        .card-thumbnail {
+            margin-bottom: 1rem;
+        }
+    }
+    &.card-vertical-md {
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            line-height: 2rem;
+        }
+        .article-category {
+            font-weight: 400;
+            font-size: .8rem;
+            margin: .4rem 0 0;
+            .little-bold {
+                color: #666;
+                font-weight: 600;
+            }
+        }
+        .card-thumbnail {
+            padding-top: 57.5%;
+        }
+    }
+    @media screen and (max-width: 996px) {
+        .card-title {
+            margin-top: .5rem;
+        }
+        &.card-horizontal-mini {
+            .card-title {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+        }
+    }
+}
