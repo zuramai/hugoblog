@@ -1,0 +1,74 @@
+baseURL = "http://localhost"
+languageCode = "en-us"
+title = "John's Blog"
+theme = "hugoblog"
+
+summaryLength = 17
+sectionPagesMenu = "main"
+
+defaultContentLanguage = "en"
+paginate = 10
+
+# Your Google Analytics ID
+# googleAnalytics = "G-93R5E9GHY0"
+# disqusShortname = "blog-saugi"
+
+enableEmoji = true
+enableGitInfo = false
+enableRobotsTXT = true
+canonifyURLs = true
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[params]
+  description = "John Doe's blog and daily writing about thoughts, tutorial, and a bit of theories. Saugi's blog may help you to open your mind up."
+  author = "John Doe"
+  faviconURL = "/favicon.svg"
+  og_image = "/images/author/saugi.jpg"
+  sitename = "John's Blog"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 1
+
+  [languages.id]
+    languageName = "Indonesia"
+    languageCode = "id"
+    weight = 2
+
+
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about-me/"
+    weight = 2
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact"
+    weight = 3
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
