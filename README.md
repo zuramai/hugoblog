@@ -1,9 +1,9 @@
 # Hugoblog
 Hugoblog is responsive, simple, and clean that very fit for your personal blog based on Hugo Theme Static Site Generator (SSG)
 
-![Screenshot](https://github.com/zuramai/hugoblog/blob/main/screenshot/tn.png?raw=true)
+![Screenshot](https://github.com/zuramai/hugoblog/blob/main/hugoblog.png?raw=true)
 
-**[Demo ](https://blog.ahmadsaugi.com/)** 
+**[Demo ](https://ahmadsaugi.com/)** 
 
 ## Installation
 
@@ -32,3 +32,30 @@ theme = "hugoblog"
 ```
 
 For more information read the official [setup guide](https://gohugo.io/themes/installing-and-using-themes/) of Hugo.
+
+
+
+## Getting started
+
+After installing the theme successfully it requires a just a few more steps to get your site running.
+
+
+### The config file
+
+Take a look inside the [`exampleSite`](https://github.com/zuramai/hugoblog/tree/main/exampleSite) folder of this theme. You'll find a file called [`config.toml`](https://github.com/zuramai/hugoblog/blob/master/exampleSite/config.toml). To use it, copy the [`config.toml`](https://github.com/zuramai/hugoblog/blob/master/exampleSite/config.toml) in the root folder of your Hugo site. Feel free to change the strings in this theme.
+
+## Change site logo
+Upload your site logo to the `/static` folder in your project, then edit `config.toml` and change `site_logo` value your image path. For example:
+```toml
+[params]
+  site_logo = "/images/logo.svg"
+```
+
+## Comments Section
+You could use Disqus comment by activating them in the `config.toml` and put your disqus shortname.
+```toml
+disqusShortname = "your-disqus-site-shortname"
+```
+
+# License
+This template is under MIT License
