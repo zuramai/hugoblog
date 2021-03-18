@@ -26,6 +26,7 @@ unsafe= true
   category = "categories"
 
 [params]
+  site_logo = "/images/logo.svg"
   description = "John Doe's blog and daily writing about thoughts, tutorial, and a bit of theories. Saugi's blog may help you to open your mind up."
   author = "John Doe"
   faviconURL = "/favicon.svg"
