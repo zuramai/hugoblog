@@ -1,9 +1,9 @@
 # Hugoblog
 Hugoblog is responsive, simple, and clean that very fit for your personal blog based on Hugo Theme Static Site Generator (SSG)
 
-![Screenshot](https://github.com/zuramai/hugoblog/blob/main/hugoblog.png?raw=true)
+![Screenshot](https://github.com/zuramai/hugoblog/blob/main/screenshot/tn.png?raw=true)
 
-**[Demo ](https://ahmadsaugi.com/)** 
+**[Demo ](https://blog.ahmadsaugi.com/)** 
 
 ## Installation
 
