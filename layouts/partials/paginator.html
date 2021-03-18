@@ -1,18 +1,21 @@
 {{- $paginator := .Paginator }}
 {{- if gt $paginator.TotalPages 1 }}
-	<div class = 'pager' id = 'pager'>
+<nav aria-label="Page navigation">
+	<ul class="paginator">
 		{{- if $paginator.HasPrev }}
-			<a href='{{ $paginator.Prev.URL }}#pager'  class = ' pager_item pager_prev'></a>
-		{{- else }}
-			<span class = ' pager_item pager_active pager_prev'></span>
+			<li class="control"><a class="page-link" href="{{ $paginator.Prev.URL }}">Prev</a></li>
 		{{- end }}
-		{{- range first 4 $paginator.Pagers }}
-			<a href="{{ .URL }}#pager" class = 'pager_item{{ if eq . $paginator }} pager_active{{ end }}'>{{ .PageNumber }}</a>
-		{{- end }}
+		
+		<ul class="pagination">
+			
+			{{- range first 4 $paginator.Pagers }}
+				<li class="page-item {{ if eq . $paginator }} active{{ end }}"><a class="page-link" href="{{ .URL }}">{{ .PageNumber }}</a></li>
+			{{- end }}
+		</ul>
+
 		{{- if $paginator.HasNext -}}
-			<a href='{{ $paginator.Next.URL }}#pager' class = ' pager_item pager_next'></a>
-		{{- else -}}
-			<span class = ' pager_item pager_active pager_next'></span>
+			<li class="control"><a class="page-link" href="{{ $paginator.Next.URL }}">Next</a></li>
 		{{- end }}
-	</div>
+	</ul>
+</nav>
 {{- end }}

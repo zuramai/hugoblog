@@ -1,0 +1,50 @@
+$paginator-padding: .3rem 1rem;
+$paginator-border: 1px solid  #ccc;
+$paginator-radius: .5rem;
+
+.paginator {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    .control {
+        padding: $paginator-padding;
+        border:$paginator-border;
+        border-radius: $paginator-radius;
+        display: block;
+        margin: 0 1rem;
+    }
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    .page-item {
+
+        .page-link {
+            padding: $paginator-padding;
+            border: $paginator-border;
+            display: block;
+        }
+
+        &:first-child {
+            .page-link {
+                border-top-left-radius: $paginator-radius;
+                border-bottom-left-radius: $paginator-radius;
+            }
+        }
+        &:last-child {
+            .page-link {
+                border-top-right-radius: $paginator-radius;
+                border-bottom-right-radius: $paginator-radius;
+            }
+        }
+
+        &.active {
+            .page-link {
+                background-color: $primary;
+                color: white;
+                border-color: $primary;
+            }
+        }
+    }
+}

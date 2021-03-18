@@ -4,16 +4,6 @@
         margin-bottom: 3rem;
         position: relative;
 
-        &:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 10px;
-            height: 20px;
-            z-index: inherit;
-            width: 120px;
-            background-color: rgba($primary,.1);
-        }
     }
 }
 

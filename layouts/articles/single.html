@@ -31,10 +31,15 @@
                     {{ end }}
                 <img src="" alt="" srcset="">
             </div>
+
             <div class="col-md-8 col-12 mx-auto">
                 <div class="the-content">
                     {{ .Content }}
                 </div>
+
+                <!-- Disqus -->
+                <h1 class='mb-5'>Comments</h1>
+                {{ template "_internal/disqus.html" . }}
             </div>
         </div>
     </div>
