@@ -15,7 +15,7 @@
                     <div class="container">
                         <div class="row ">
                             <div class="col-lg-9 col-12">
-                                {{ range (.Paginator 2).Pages }}
+                                {{ range (.Paginate ( .Pages.ByDate.Reverse )).Pages }}
                                     {{ partial "card/card-horizontal.html" . }}
                                 {{ end }}
                             </div>

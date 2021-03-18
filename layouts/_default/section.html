@@ -10,9 +10,10 @@
                         <h1 class='section-title'>{{ .Section | humanize }}</h1>
                         <div class="row ">
                             <div class="col-lg-9 col-12">
-                                {{ range .Paginator.Pages }}
+                                {{ range (.Paginate ( .Pages.ByDate.Reverse )).Pages }}
                                     {{ partial "card/card-horizontal.html" . }}
-                                {{ end }}
+                                {{  end }}
+                                {{ partial "paginator" . }}
                             </div>
                         </div>
                     </div>
