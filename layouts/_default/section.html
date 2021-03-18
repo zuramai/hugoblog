@@ -2,12 +2,12 @@
 <html lang="{{ .Site.LanguageCode }}">
     {{- partial "head.html" . -}}
     <body>
-        <div id="app">
+        <div id="app" class='section-page'>
             {{- partial "header.html" . -}}
             <main id="content">
                 <main id="terms">
                     <div class="container">
-                        <h1 class='section-header'>Articles</h1>
+                        <h1 class='section-title'>{{ .Section | humanize }}</h1>
                         <div class="row ">
                             <div class="col-lg-9 col-12">
                                 {{ range .Paginator.Pages }}
