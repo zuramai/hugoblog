@@ -74,7 +74,7 @@
     <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
     {{ end }}
 
-    {{ template "_internal/google_analytics_async.html" . }}
+    {{ template "_internal/google_analytics.html" . }}
 
     {{ if eq .Section "articles" }} 
 

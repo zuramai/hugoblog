@@ -19,6 +19,14 @@ a {
 }
 h1,h2,h3,h4,h5,h6 {
     color: $heading-color;
+    position: relative;
+}
+.anchor {
+    position: absolute;
+    left: -30px;
+}
+h3 {
+    font-size: 1.3rem;
 }
 .row {
     margin: 0 -1rem;
@@ -36,7 +44,12 @@ h1,h2,h3,h4,h5,h6 {
     padding: 0 1rem;
     margin: 0 auto;
 }
-
+blockquote, figcaption, ol, p, pre, table, ul {
+    font-size: 1rem;
+    margin-top: 0;
+    line-height: 1.77778rem;
+    margin-bottom: 1.77778rem;
+}
 .col-1 { flex: none; width: calc(100% * 1 / 12) }
 .col-2 { flex: none; width: calc(100% * 2 / 12) }
 .col-3 { flex: none; width: calc(100% * 3 / 12) }

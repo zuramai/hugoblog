@@ -1,0 +1,14 @@
+pre, pre[class*="language-"] {
+    margin-top: 0;
+    margin-bottom: 1.77778rem;
+    padding: .75rem;
+    border: 1px solid rgba(51,51,51,.1);
+    background: #f9f9fa;
+    overflow: auto;
+    border-radius: 1rem;
+}
+p > code {
+    background: #f7f7ff;
+    color: rgb(54, 54, 56);
+    padding: .1rem .3rem .2rem;
+}
