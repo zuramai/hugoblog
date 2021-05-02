@@ -8,7 +8,7 @@ Hugoblog is responsive, simple, and clean that very fit for your personal blog b
 ## Installation
 
 *Before starting, please be sure that you have
-[installed Hugo](https://gohugo.io/getting-started/quick-start/#step-1-install-hugo) and
+[installed extended version of Hugo](https://github.com/gohugoio/hugo/releases) and
 [created a new site](https://gohugo.io/getting-started/quick-start/#step-2-create-a-new-site). After that, you ready to
 install **Mainroad**.*
 
