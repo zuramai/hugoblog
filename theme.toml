@@ -14,8 +14,3 @@ min_version = "0.41.0"
   name = "Ahmad Saugi"
   homepage = "https://ahmadsaugi.com"
 
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""

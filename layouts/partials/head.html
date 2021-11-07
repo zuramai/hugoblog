@@ -5,6 +5,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
     <noscript>
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
@@ -56,6 +57,7 @@
             {{ $thumb := .Resize "400x" }}
             <meta itemprop="image" content="{{ $thumb.Permalink }}" />
             <meta property="og:image" content="{{ $thumb.Permalink }}" /> 
+            <meta property="og:image:secure_url" content="{{ $thumb.Permalink }}" /> 
             <meta name="twitter:image" content="{{ $thumb.Permalink }}" />
             <meta name="twitter:image:src" content="{{ $thumb.Permalink }}" /> 
         {{ end }}
@@ -76,11 +78,11 @@
 
     {{ template "_internal/google_analytics.html" . }}
 
+    <meta property="og:type" content="website" />
     {{ if eq .Section "articles" }} 
 
         <!-- Pagination meta tags for list pages only -->
         
-        <meta property="og:type" content="article" />
         <meta property="article:publisher" content="{{ .Site.Params.facebook }}" /> 
         <meta property="og:article:published_time" content={{ .Date.Format "2006-01-02T15:04:05Z0700" | safeHTML }} /> 
         <meta property="article:published_time" content={{ .Date.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />

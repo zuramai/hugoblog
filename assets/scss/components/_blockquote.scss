@@ -1,0 +1,25 @@
+#content {
+    blockquote {
+        padding: 2rem 1rem;
+        position: relative;
+        background-color: $blockquote-bg;
+        border-radius: .4rem;
+        h1,h2,h3,h4,h5,h6 {
+            margin: 0 !important;
+        }
+        * {
+            color: rgba(4, 5, 10, 0.589) !important;
+        }
+        
+        &.quote {
+            text-align: center;
+        }
+        .quote__icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            opacity: .3
+        }
+    }
+    
+}
