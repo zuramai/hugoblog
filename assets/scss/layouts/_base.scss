@@ -24,6 +24,11 @@ h1,h2,h3,h4,h5,h6 {
 .anchor {
     position: absolute;
     left: -30px;
+    top: -5px;
+    fill: #777;
+    &:hover {
+        fill: #444;
+    }
     @media screen and (max-width: 767px) {
         display: none;
     }

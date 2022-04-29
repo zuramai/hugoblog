@@ -4,7 +4,7 @@ main#content {
         text-align: left;
 
         h1 {
-            font-size: 44px;
+            font-size: clamp(32px,4vw,44px);
         }
     }
     .thumbnail-image {
@@ -26,10 +26,11 @@ main#content {
     .tags {
         display: flex;
         justify-content: flex-start;
-        margin: 1rem 0 2rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: .5rem;
         .tag {
             list-style: none;
-            margin: 0 .5rem;
             a {
                 padding: .5rem 1rem;
                 display: inline-block;
@@ -47,12 +48,15 @@ main#content {
         &:not(.image-not-full) {
             width: 100%;
         }
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
     }
     p, li {
         font-size: $font-size-base;
         color: rgb(70, 70, 70);
-        line-height: 31px;
-        letter-spacing: -0.005em;
+        line-height: 36px;
+        letter-spacing: 0.005em;
     }
     p {
         margin-top: 1.2em;
@@ -63,6 +67,9 @@ main#content {
     li {
         margin-top: .2em;
         padding-left: 1rem;
+        &::marker {
+            color: $primary;
+        }
     }
     time {
         text-align: center;
@@ -70,12 +77,15 @@ main#content {
     h2 {
         font-size: 40px;
     }
-    h1,h2,h3,h4,h5,h6 {
-        margin-top: 5rem;
+    h1,h2 {
+        margin-top: 3rem;
 
         & + p {
             margin-top: 1.5rem;
         }
+    }
+    h3,h4,h5 {
+        margin-top: 1.5rem;
     }
 }
 .image-wrapper {
