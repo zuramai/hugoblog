@@ -12,3 +12,11 @@ p > code {
     color: rgb(54, 54, 56);
     padding: .1rem .3rem .2rem;
 }
+h1,h2,h3,h4,h5,h6  {
+    code {
+        font-size: inherit;
+        background: #ececec;
+        color: #6969ff;
+        padding: .1rem .3rem .2rem;
+    }
+}
