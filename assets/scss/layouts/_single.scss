@@ -1,5 +1,5 @@
 main#content {
-    font-family: $content-font-family;
+    font-family: $font-family-content;
     .single-header {
         text-align: left;
 
@@ -22,29 +22,7 @@ main#content {
         position: relative;
         padding-top: 56%;
     }
-    .the-content {
-        margin-bottom: 5rem;
-        p {
-            font-size: 1.2rem;
-            color: rgb(70, 70, 70);
-            margin-top: 1.2em;
-            line-height: 31px;
-            letter-spacing: -0.005em;
-        }
-        time {
-            text-align: center;
-        }
-        h2 {
-            font-size: 40px;
-        }
-        h1,h2,h3,h4,h5,h6 {
-            margin-top: 5rem;
     
-            & + p {
-                margin-top: 1.5rem;
-            }
-        }
-    }
     .tags {
         display: flex;
         justify-content: flex-start;
@@ -60,5 +38,51 @@ main#content {
                 border-radius: .3rem;
             }
         }
+    }
+}
+.the-content {
+    margin-bottom: 5rem;
+    img {
+        width: auto;
+        &:not(.image-not-full) {
+            width: 100%;
+        }
+    }
+    p, li {
+        font-size: $font-size-base;
+        color: rgb(70, 70, 70);
+        line-height: 31px;
+        letter-spacing: -0.005em;
+    }
+    p {
+        margin-top: 1.2em;
+    }
+    ul, ol {
+        margin-left: 1rem;
+    }
+    li {
+        margin-top: .2em;
+        padding-left: 1rem;
+    }
+    time {
+        text-align: center;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    h1,h2,h3,h4,h5,h6 {
+        margin-top: 5rem;
+
+        & + p {
+            margin-top: 1.5rem;
+        }
+    }
+}
+.image-wrapper {
+    margin: 0 -10%;
+}
+@media screen and (max-width: 767px) {
+    .image-wrapper {
+        margin: 0;
     }
 }
