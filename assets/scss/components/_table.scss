@@ -1,0 +1,15 @@
+table {
+    font-size: $font-size-base;
+    border-collapse: collapse;
+    thead {
+        text-align: left;
+        border-bottom: 1px solid rgb(78, 78, 78);
+    }
+    td,th {
+        padding: 1rem;
+        border-bottom: 1px solid #dedede;
+    }
+    th {
+        border-bottom: 3px solid #dedede;
+    }
+}
