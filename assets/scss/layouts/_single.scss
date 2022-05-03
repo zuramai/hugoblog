@@ -57,7 +57,7 @@ main#content {
     }
     p, li {
         font-size: $font-size-base;
-        color: rgb(70, 70, 70);
+        color: $article-content-color;
         line-height: 36px;
         letter-spacing: 0.005em;
     }

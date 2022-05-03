@@ -1,6 +1,7 @@
 table {
     font-size: $font-size-base;
     border-collapse: collapse;
+    color: $article-content-color;
     thead {
         text-align: left;
         border-bottom: 1px solid rgb(78, 78, 78);
