@@ -56,9 +56,9 @@ main#content {
         }
     }
     p, li {
-        font-size: $font-size-base;
+        font-size: clamp($font-size-mobile,3vw,$font-size-base);
         color: $article-content-color;
-        line-height: 36px;
+        line-height: clamp(29px,4vw, 2.2rem);
         letter-spacing: 0.005em;
     }
     p {

@@ -33,9 +33,11 @@
     {{ if eq .Section "articles" }} 
         {{ $description = .Params.description }}
     {{ end }}
+
     <meta name="description" content="{{ $description }}" />
     <meta itemprop="description" content="{{ $description }}" />
     <meta property="og:description" content="{{ $description }}" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:description" content="{{ $description }}" />
 
     <base href="{{ .Permalink }}">
@@ -43,7 +45,6 @@
     <meta name="url" content="{{ .Permalink }}" />
     <meta name="twitter:url" content="{{ .Permalink }}" /> 
     <meta property="og:url" content="{{ .Permalink }}" />
-
     <meta property="og:locale" content="{{ .Language.Lang }}">
     <meta name="language" content="{{ .Language.LanguageName }}">
     {{ range .AllTranslations }}
@@ -53,14 +54,16 @@
     
     {{ if .Params.featured_image }}
         {{ with .Resources.GetMatch (.Params.featured_image) }}
-            {{ $thumb := .Resize "400x" }}
+            {{ $thumb := .Resize "1280x720" }}
             <meta itemprop="image" content="{{ $thumb.Permalink }}" />
             <meta property="og:image" content="{{ $thumb.Permalink }}" /> 
             <meta property="og:image:secure_url" content="{{ $thumb.Permalink }}" /> 
+            <meta property="og:image:width" content="1280" /><meta property="og:image:height" content="720" />
             <meta name="twitter:image" content="{{ $thumb.Permalink }}" />
             <meta name="twitter:image:src" content="{{ $thumb.Permalink }}" /> 
         {{ end }}
     {{ else }}
+
     <meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
     <meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
     <meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
@@ -77,7 +80,12 @@
 
     {{ template "_internal/google_analytics.html" . }}
 
+    {{ if eq .Section "articles" }} 
+    <meta property="og:type" content="article" />
+    {{ else }}
     <meta property="og:type" content="website" />
+    {{ end }}
+
     {{ if eq .Section "articles" }} 
 
         <!-- Pagination meta tags for list pages only -->
