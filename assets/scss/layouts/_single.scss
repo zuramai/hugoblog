@@ -55,9 +55,9 @@ main#content {
             width: 100%;
         }
     }
-    p, li {
-        font-size: clamp($font-size-mobile,3vw,$font-size-base);
+    p, li, table {
         color: $article-content-color;
+        font-size: clamp($font-size-mobile,3vw,$font-size-base);
         line-height: clamp(29px,4vw, 2.2rem);
         letter-spacing: 0.005em;
     }
