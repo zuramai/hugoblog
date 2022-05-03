@@ -3,7 +3,7 @@ Hugoblog is responsive, simple, and clean that very fit for your personal blog b
 
 ![Screenshot](https://github.com/zuramai/hugoblog/blob/main/images/tn.png?raw=true)
 
-**[Demo ](https://blog.ahmadsaugi.com/)** 
+Click **[here](https://blog.saugi.me/)** for live demo.
 
 ## Installation
 
