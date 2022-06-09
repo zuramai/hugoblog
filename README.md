@@ -10,7 +10,7 @@ Click **[here](https://blog.saugi.me/)** for live demo.
 *Before starting, please be sure that you have
 [installed extended version of Hugo](https://github.com/gohugoio/hugo/releases) and
 [created a new site](https://gohugo.io/getting-started/quick-start/#step-2-create-a-new-site). After that, you ready to
-install **Mainroad**.*
+install **Hugoblog**.*
 
 In your Hugo site `themes` directory, run:
 
